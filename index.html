@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Netflix</title>
+</head>
+<style>
+  :root {
+    --text: #ffffff;
+    --init-button: #e50914;
+    --init-hover-button: #c11119;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("https://i.postimg.cc/zXXJ8LLZ/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    height: 100vh;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.fondo {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding-bottom: 100px;
+    
+}
+
+header {
+    height: 100px;
+}
+
+header img {
+    width: 15rem;
+    height: auto;
+    margin-left: 20px;
+}
+
+.wrapper {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 30rem;
+    height: 50rem;
+    margin: 0 auto;
+}
+
+
+h1 {
+    margin-top: 70px;
+    color: var(--text);
+    margin-left: 65px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    height: 40px;
+    padding: 7px;
+    color: var(--text);
+    background: rgba(22, 22, 22, 0.7) !important;
+    border-color: rgba(128, 128, 128, 0.7) !important;
+}
+
+
+
+form button {
+    width: 74%;
+    height: 45px;
+    margin: 0 auto;
+    margin-top: 10px;
+    background-color: var(--init-button);
+    color: var(--text);
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: var(--init-hover-button);
+}
+
+.o {
+    color: var(--text);
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+p {
+    margin: auto;
+    margin-top: 10px;
+    width: 80%;
+    color: #565452;
+    padding: 5px;
+}
+
+
+.alternative {
+    background-color: rgba(169, 169, 169, 0.5);
+    color: var(--text);
+    border: 1px solid #a9a9a9;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.alternative:hover {
+    background-color: rgba(169, 169, 169, 0.8);
+}
+
+.recuperar-contraseña {
+    color: var(--text);
+    margin-top: 20px !important;
+}
+
+.recuperar-contraseña:hover {
+    color: gray;
+    text-decoration: underline;
+}
+
+.reCAPTCHA {
+    font-size: 14px;
+}
+
+.more-info {
+    color: #4376c7;
+}
+
+.container-checkbox {
+    margin-top: 20px;
+    color: var(--text);
+    margin-left: 50px;
+}
+
+
+.wrapper a {
+    text-align: center;
+    margin-top: 15px;
+    text-decoration: none;
+}
+
+strong {
+    color: var(--text);
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #757575;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.footer-menu a {
+    padding: 10px;
+    text-decoration: underline;
+    color: #9f9c9e;
+}
+
+
+</style>
+<body>
+
+    <div class="fondo">
+        <header>
+            <img src="https://i.postimg.cc/NFKgyhft/Netflix-Logo-PMS.png" alt="">
+        </header>
+
+        <div class="wrapper">
+
+            <form action="">
+                <h1>Inicia sesión</h1>
+                <input type="text" placeholder="Email o numero de celular">
+                <input type="text" placeholder="Contraseña">
+                <button>Iniciar sesion</button>
+                <span class="o">O</span>
+                <button class="alternative">Usar un codigo de inicio de sesion</button>
+                <a class="recuperar-contraseña" href="">¿Olvidaste la contraseña?</a>
+            </form>
+
+            <div class="container-checkbox">
+                <input type="checkbox" id="checkbox"> <label for="checkbox">Recuerdame</label>
+            </div>
+
+            <p>¿Primera vez en Netflix? <a href=""><strong>Suscríbete ahora.</strong></a></p>
+
+            <p class="reCAPTCHA">Esta página está protegida por Google reCAPTCHA para comprobar que no eres un robot. <a
+                    href="" class="more-info">Más info.</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-menu">
+            <a href="">¿Preguntas? Llama al 0800 345 1593</a>
+            <div>
+                <a href="">Preguntas frecuentes</a><a href="">Centro de ayuda</a><a href="">Términos de uso</a><a
+                    href="">Privacidad</a></a>
+            </div>
+            <div>
+                <a href="">Preferencias de cookies <a href="">Información corporativa</a></a>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="./js/index.js"></script>
+</body>
+
+
+</html>
